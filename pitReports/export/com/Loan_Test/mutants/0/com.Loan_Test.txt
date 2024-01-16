@@ -1,0 +1,137 @@
+// class version 61.0 (61)
+// access flags 0x21
+public class com/Loan_Test {
+
+  // compiled from: Loan_Test.java
+
+  // access flags 0x1
+  public <init>()V
+   L0
+    LINENUMBER 8 L0
+    ALOAD 0
+    INVOKESPECIAL java/lang/Object.<init> ()V
+    RETURN
+   L1
+    LOCALVARIABLE this Lcom/Loan_Test; L0 L1 0
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x1
+  public calculateMonthlyRate()V
+  @Lorg/junit/Test;()
+   L0
+    LINENUMBER 12 L0
+    LDC 1000.0
+    LDC 5.0
+    BIPUSH 12
+    INVOKESTATIC com/Loan_Class.calculateMonthlyRate (DDI)D
+    DSTORE 1
+   L1
+    LINENUMBER 13 L1
+    LDC 85.61
+    DLOAD 1
+    LDC 0.01
+    POP2
+    POP2
+    POP2
+   L2
+    LINENUMBER 14 L2
+    RETURN
+   L3
+    LOCALVARIABLE this Lcom/Loan_Test; L0 L3 0
+    LOCALVARIABLE monthlyRate D L1 L3 1
+    MAXSTACK = 6
+    MAXLOCALS = 3
+
+  // access flags 0x1
+  public calculateTotalInterest()V
+  @Lorg/junit/Test;()
+   L0
+    LINENUMBER 18 L0
+    LDC 1000.0
+    LDC 10.0
+    BIPUSH 12
+    INVOKESTATIC com/Loan_Class.calculateTotalInterest (DDI)D
+    DSTORE 1
+   L1
+    LINENUMBER 19 L1
+    LDC 54.99056
+    DLOAD 1
+    LDC 0.1
+    INVOKESTATIC org/junit/jupiter/api/Assertions.assertEquals (DDD)V
+   L2
+    LINENUMBER 20 L2
+    RETURN
+   L3
+    LOCALVARIABLE this Lcom/Loan_Test; L0 L3 0
+    LOCALVARIABLE totalInterest D L1 L3 1
+    MAXSTACK = 6
+    MAXLOCALS = 3
+
+  // access flags 0x1
+  public loanDetails()V
+  @Lorg/junit/Test;()
+   L0
+    LINENUMBER 24 L0
+    LDC 1000.0
+    DSTORE 1
+   L1
+    LINENUMBER 25 L1
+    LDC 10.0
+    DSTORE 3
+   L2
+    LINENUMBER 26 L2
+    BIPUSH 12
+    ISTORE 5
+   L3
+    LINENUMBER 28 L3
+    DLOAD 1
+    DLOAD 3
+    ILOAD 5
+    INVOKESTATIC com/Loan_Class.calculateMonthlyRate (DDI)D
+    DSTORE 6
+   L4
+    LINENUMBER 29 L4
+    ILOAD 5
+    ISTORE 8
+   L5
+    LINENUMBER 30 L5
+    DLOAD 1
+    DLOAD 1
+    DLOAD 3
+    ILOAD 5
+    INVOKESTATIC com/Loan_Class.calculateTotalInterest (DDI)D
+    DADD
+    DSTORE 9
+   L6
+    LINENUMBER 32 L6
+    LDC 87.91588
+    DLOAD 6
+    LDC 0.1
+    INVOKESTATIC org/junit/jupiter/api/Assertions.assertEquals (DDD)V
+   L7
+    LINENUMBER 33 L7
+    BIPUSH 12
+    ILOAD 8
+    INVOKESTATIC org/junit/jupiter/api/Assertions.assertEquals (II)V
+   L8
+    LINENUMBER 34 L8
+    LDC 1054.9906
+    DLOAD 9
+    LDC 0.1
+    INVOKESTATIC org/junit/jupiter/api/Assertions.assertEquals (DDD)V
+   L9
+    LINENUMBER 35 L9
+    RETURN
+   L10
+    LOCALVARIABLE this Lcom/Loan_Test; L0 L10 0
+    LOCALVARIABLE debtValue D L1 L10 1
+    LOCALVARIABLE interestRate D L2 L10 3
+    LOCALVARIABLE paybackDuration I L3 L10 5
+    LOCALVARIABLE monthlyRate D L4 L10 6
+    LOCALVARIABLE numberOfPayments I L5 L10 8
+    LOCALVARIABLE overallDebt D L6 L10 9
+    MAXSTACK = 7
+    MAXLOCALS = 11
+}
+

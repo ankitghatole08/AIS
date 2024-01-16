@@ -1,0 +1,1 @@
+MutationDetails [id=MutationIdentifier [location=Location [clazz=com.Loan_Test, method=loanDetails, methodDesc=()V], indexes=[38], mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator], filename=Loan_Test.java, block=[2], lineNumber=32, description=removed call to org/junit/jupiter/api/Assertions::assertEquals, testsInOrder=[]]

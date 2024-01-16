@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="build" name="AIS">
+    <property environment="env"/>
+    <property name="junit.output.dir" value="junit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="17"/>
+    <property name="source" value="17"/>
+	
+	 <property name="spotbugs.home" value="lib/" />
+	    
+	    <taskdef
+	    resource="edu/umd/cs/findbugs/anttask/tasks.properties"
+	    classpath="${spotbugs.home}/spotbugs-ant.jar" />
+	
+	
+	<path id="pitest.path">
+			<pathelement location="lib/pitest-1.9.3.jar" />
+			<pathelement location="lib/pitest-entry-1.9.3.jar" />
+			<pathelement location="lib/pitest-ant-1.9.3.jar" />
+	    </path>
+
+   <taskdef name="pitest" classname="org.pitest.ant.PitestTask" classpathref="pitest.path" />
+	    
+	
+	
+	<path id="JUnit 5.libraryclasspath">
+	        <pathelement location="lib/junit-jupiter-api_5.10.0.jar"/>
+	        <pathelement location="lib/junit-jupiter-engine_5.10.0.jar"/>
+	        <pathelement location="lib/junit-jupiter-migrationsupport_5.10.0.jar"/>
+	        <pathelement location="lib/junit-jupiter-params_5.10.0.jar"/>
+	        <pathelement location="lib/junit-platform-commons_1.10.0.jar"/>
+	        <pathelement location="lib/junit-platform-engine_1.10.0.jar"/>
+	        <pathelement location="lib/junit-platform-launcher_1.10.0.jar"/>
+	        <pathelement location="lib/junit-platform-runner_1.10.0.jar"/>
+	        <pathelement location="lib/junit-platform-suite-api_1.10.0.jar"/>
+	        <pathelement location="lib/junit-platform-suite-engine_1.10.0.jar"/>
+	        <pathelement location="lib/junit-platform-suite-commons_1.10.0.jar"/>
+	        <pathelement location="lib/junit-vintage-engine_5.10.0.jar"/>
+	        <pathelement location="lib/org.opentest4j_1.3.0.jar"/>
+	        <pathelement location="lib/org.apiguardian.api_1.1.2.jar"/>
+	        <pathelement location="lib/org.junit_4.13.2.v20230809-1000.jar"/>
+	        <pathelement location="lib/org.hamcrest_2.2.0.jar"/>
+	        <pathelement location="lib/org.hamcrest.core_2.2.0.v20230809-1000.jar"/>
+	    </path>
+	
+    <path id="AIS.classpath">
+        <pathelement location="bin"/>
+        <path refid="JUnit 5.libraryclasspath"/>
+    </path>
+    <path id="run.Loan_Class.classpath">
+        <path refid="AIS.classpath"/>
+        <path refid="JUnit 5.libraryclasspath"/>
+    </path>
+    <path id="run.Loan_Test.classpath"> <!-- chnaged run.AIS to run.Loan_Test -->
+        <path refid="AIS.classpath"/>
+        <path refid="JUnit 5.libraryclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="AIS.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="Loan_Class">
+        <java classname="com.Loan_Class" failonerror="true" fork="yes"><!--added src. -->
+            <classpath refid="run.Loan_Class.classpath"/>
+        </java>
+    </target>
+    <target name="Loan_Test">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.Loan_Test" todir="${junit.output.dir}"/><!--can change src. to bin. -->
+            <jvmarg line="-ea"/>
+            <classpath refid="run.Loan_Test.classpath"/>
+        </junit>
+    </target>
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
+    </target>
+	
+	
+	
+	
+	
+	<target name="pit" depends="Loan_Test">
+			<path id="mutation.path">
+				<path refid="pitest.path"/>
+				<path refid="run.Loan_Test.classpath"/>
+			</path>
+	        <!-- export feature has been activated to write mutants to file -->
+	        <pitest features="+EXPORT" pitClasspath="pitest.path" threads="2" classPath="mutation.path" targetTests="com.*" targetClasses="com.*" reportDir="pitReports" sourceDir="src" />
+		</target>
+		
+	
+	
+	<target name="spotbugs" depends="build">
+	  <spotbugs home="${spotbugs.home}"
+	            output="xml"
+	            outputFile="bcel-sb.xml" >	
+	    <auxClasspath path="${basedir}/lib/Regex.jar" />
+	    <sourcePath path="${basedir}/src/" />
+	    <class location="${basedir}/bin/com/Loan_Class.class" />
+	  </spotbugs>
+	</target>
+	
+	
+</project>

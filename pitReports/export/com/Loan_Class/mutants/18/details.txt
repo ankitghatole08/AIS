@@ -1,0 +1,1 @@
+MutationDetails [id=MutationIdentifier [location=Location [clazz=com.Loan_Class, method=calculateTotalInterest, methodDesc=(DDI)D], indexes=[15], mutator=org.pitest.mutationtest.engine.gregor.mutators.MathMutator], filename=Loan_Class.java, block=[1], lineNumber=40, description=Replaced double subtraction with addition, testsInOrder=[]]

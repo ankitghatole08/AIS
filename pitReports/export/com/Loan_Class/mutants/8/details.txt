@@ -1,0 +1,1 @@
+MutationDetails [id=MutationIdentifier [location=Location [clazz=com.Loan_Class, method=main, methodDesc=([Ljava/lang/String;)V], indexes=[84], mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator], filename=Loan_Class.java, block=[13], lineNumber=30, description=removed call to java/util/Scanner::close, testsInOrder=[]]
