@@ -10,10 +10,10 @@ public class Loan_Class {
         System.out.print("Enter debt value (in euros): ");
         double debtValue = scanner.nextDouble();
 
-        System.out.print("Enter interest rate (percentage): ");
+        System.out.print("Enter interest rate (in percentage): ");
         double interestRate = scanner.nextDouble();
 
-        System.out.print("Enter payback duration (months): ");
+        System.out.print("Enter duration of Loan (in months): ");
         int paybackDuration = scanner.nextInt();
 
         // Calculate loan parameters
@@ -22,10 +22,10 @@ public class Loan_Class {
         double overallDebt = debtValue + calculateTotalInterest(debtValue, interestRate, paybackDuration);
 
         // Display results
-        System.out.println("\nLoan Details:");
-        System.out.println("Monthly Rate: " + monthlyRate + " euros");
+        System.out.println("\nLoan Details are:");
+        System.out.println("Monthly Amaount: " + monthlyRate + " euros");
         System.out.println("Number of Payments: " + numberOfPayments);
-        System.out.println("Overall Debt: " + overallDebt + " euros");
+        System.out.println("Total Debt: " + overallDebt + " euros");
 
         scanner.close();
     }

@@ -7,7 +7,7 @@ public class com/Loan_Test {
   // access flags 0x1
   public <init>()V
    L0
-    LINENUMBER 8 L0
+    LINENUMBER 10 L0
     ALOAD 0
     INVOKESPECIAL java/lang/Object.<init> ()V
     RETURN
@@ -20,20 +20,20 @@ public class com/Loan_Test {
   public calculateMonthlyRate()V
   @Lorg/junit/Test;()
    L0
-    LINENUMBER 12 L0
+    LINENUMBER 14 L0
     LDC 1000.0
     LDC 5.0
     BIPUSH 12
     INVOKESTATIC com/Loan_Class.calculateMonthlyRate (DDI)D
     DSTORE 1
    L1
-    LINENUMBER 13 L1
+    LINENUMBER 15 L1
     LDC 85.61
     DLOAD 1
     LDC 0.01
     INVOKESTATIC org/junit/jupiter/api/Assertions.assertEquals (DDD)V
    L2
-    LINENUMBER 14 L2
+    LINENUMBER 16 L2
     RETURN
    L3
     LOCALVARIABLE this Lcom/Loan_Test; L0 L3 0
@@ -45,20 +45,20 @@ public class com/Loan_Test {
   public calculateTotalInterest()V
   @Lorg/junit/Test;()
    L0
-    LINENUMBER 18 L0
+    LINENUMBER 20 L0
     LDC 1000.0
     LDC 10.0
     BIPUSH 12
     INVOKESTATIC com/Loan_Class.calculateTotalInterest (DDI)D
     DSTORE 1
    L1
-    LINENUMBER 19 L1
+    LINENUMBER 21 L1
     LDC 54.99056
     DLOAD 1
     LDC 0.1
     INVOKESTATIC org/junit/jupiter/api/Assertions.assertEquals (DDD)V
    L2
-    LINENUMBER 20 L2
+    LINENUMBER 22 L2
     RETURN
    L3
     LOCALVARIABLE this Lcom/Loan_Test; L0 L3 0
@@ -70,30 +70,30 @@ public class com/Loan_Test {
   public loanDetails()V
   @Lorg/junit/Test;()
    L0
-    LINENUMBER 24 L0
+    LINENUMBER 26 L0
     LDC 1000.0
     DSTORE 1
    L1
-    LINENUMBER 25 L1
+    LINENUMBER 27 L1
     LDC 10.0
     DSTORE 3
    L2
-    LINENUMBER 26 L2
+    LINENUMBER 28 L2
     BIPUSH 12
     ISTORE 5
    L3
-    LINENUMBER 28 L3
+    LINENUMBER 30 L3
     DLOAD 1
     DLOAD 3
     ILOAD 5
     INVOKESTATIC com/Loan_Class.calculateMonthlyRate (DDI)D
     DSTORE 6
    L4
-    LINENUMBER 29 L4
+    LINENUMBER 31 L4
     ILOAD 5
     ISTORE 8
    L5
-    LINENUMBER 30 L5
+    LINENUMBER 32 L5
     DLOAD 1
     DLOAD 1
     DLOAD 3
@@ -102,25 +102,25 @@ public class com/Loan_Test {
     DADD
     DSTORE 9
    L6
-    LINENUMBER 32 L6
+    LINENUMBER 34 L6
     LDC 87.91588
     DLOAD 6
     LDC 0.1
     INVOKESTATIC org/junit/jupiter/api/Assertions.assertEquals (DDD)V
    L7
-    LINENUMBER 33 L7
+    LINENUMBER 35 L7
     BIPUSH 12
     ILOAD 8
     POP
     POP
    L8
-    LINENUMBER 34 L8
+    LINENUMBER 36 L8
     LDC 1054.9906
     DLOAD 9
     LDC 0.1
     INVOKESTATIC org/junit/jupiter/api/Assertions.assertEquals (DDD)V
    L9
-    LINENUMBER 35 L9
+    LINENUMBER 37 L9
     RETURN
    L10
     LOCALVARIABLE this Lcom/Loan_Test; L0 L10 0

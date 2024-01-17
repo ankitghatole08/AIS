@@ -40,7 +40,7 @@ public class com/Loan_Class {
    L3
     LINENUMBER 13 L3
     GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
-    LDC "Enter interest rate (percentage): "
+    LDC "Enter interest rate (in percentage): "
     INVOKEVIRTUAL java/io/PrintStream.print (Ljava/lang/String;)V
    L4
     LINENUMBER 14 L4
@@ -50,7 +50,7 @@ public class com/Loan_Class {
    L5
     LINENUMBER 16 L5
     GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
-    LDC "Enter payback duration (months): "
+    LDC "Enter duration of Loan (in months): "
     POP
     POP
    L6
@@ -81,7 +81,7 @@ public class com/Loan_Class {
    L10
     LINENUMBER 25 L10
     GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
-    LDC "\nLoan Details:"
+    LDC "\nLoan Details are:"
     INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/String;)V
    L11
     LINENUMBER 26 L11
@@ -91,7 +91,7 @@ public class com/Loan_Class {
       // handle kind 0x6 : INVOKESTATIC
       java/lang/invoke/StringConcatFactory.makeConcatWithConstants(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
       // arguments:
-      "Monthly Rate: \u0001 euros"
+      "Monthly Amaount: \u0001 euros"
     ]
     INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/String;)V
    L12
@@ -113,7 +113,7 @@ public class com/Loan_Class {
       // handle kind 0x6 : INVOKESTATIC
       java/lang/invoke/StringConcatFactory.makeConcatWithConstants(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
       // arguments:
-      "Overall Debt: \u0001 euros"
+      "Total Debt: \u0001 euros"
     ]
     INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/String;)V
    L14

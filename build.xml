@@ -56,7 +56,7 @@
         <path refid="AIS.classpath"/>
         <path refid="JUnit 5.libraryclasspath"/>
     </path>
-    <path id="run.Loan_Test.classpath"> <!-- chnaged run.AIS to run.Loan_Test -->
+    <path id="run.Loan_Test.classpath"> 
         <path refid="AIS.classpath"/>
         <path refid="JUnit 5.libraryclasspath"/>
     </path>
