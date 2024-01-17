@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="DESKTOP-D9BBMAU" name="com.Loan_Test" skipped="0" tests="3" time="0.115" timestamp="2024-01-17T17:16:40">
+<testsuite errors="0" failures="0" hostname="DESKTOP-D9BBMAU" name="com.Loan_Test" skipped="0" tests="3" time="0.112" timestamp="2024-01-17T19:23:11">
   <properties>
     <property name="java.vendor" value="Oracle Corporation" />
     <property name="env.USERDOMAIN_ROAMINGPROFILE" value="DESKTOP-D9BBMAU" />
@@ -75,11 +75,11 @@
     <property name="java.vm.vendor" value="Oracle Corporation" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
     <property name="java.class.path" value="C:\Users\ACER\eclipse-workspace\AIS\bin;C:\Users\ACER\eclipse-workspace\AIS\lib\junit-jupiter-api_5.10.0.jar;C:\Users\ACER\eclipse-workspace\AIS\lib\junit-jupiter-engine_5.10.0.jar;C:\Users\ACER\eclipse-workspace\AIS\lib\junit-jupiter-migrationsupport_5.10.0.jar;C:\Users\ACER\eclipse-workspace\AIS\lib\junit-jupiter-params_5.10.0.jar;C:\Users\ACER\eclipse-workspace\AIS\lib\junit-platform-commons_1.10.0.jar;C:\Users\ACER\eclipse-workspace\AIS\lib\junit-platform-engine_1.10.0.jar;C:\Users\ACER\eclipse-workspace\AIS\lib\junit-platform-launcher_1.10.0.jar;C:\Users\ACER\eclipse-workspace\AIS\lib\junit-platform-runner_1.10.0.jar;C:\Users\ACER\eclipse-workspace\AIS\lib\junit-platform-suite-api_1.10.0.jar;C:\Users\ACER\eclipse-workspace\AIS\lib\junit-platform-suite-engine_1.10.0.jar;C:\Users\ACER\eclipse-workspace\AIS\lib\junit-platform-suite-commons_1.10.0.jar;C:\Users\ACER\eclipse-workspace\AIS\lib\junit-vintage-engine_5.10.0.jar;C:\Users\ACER\eclipse-workspace\AIS\lib\org.opentest4j_1.3.0.jar;C:\Users\ACER\eclipse-workspace\AIS\lib\org.apiguardian.api_1.1.2.jar;C:\Users\ACER\eclipse-workspace\AIS\lib\org.junit_4.13.2.v20230809-1000.jar;C:\Users\ACER\eclipse-workspace\AIS\lib\org.hamcrest_2.2.0.jar;C:\Users\ACER\eclipse-workspace\AIS\lib\org.hamcrest.core_2.2.0.v20230809-1000.jar;C:\Program Files\apache-ant-1.9.16\lib\ant-launcher.jar;C:\Program Files\apache-ant-1.9.16\lib\ant.jar;C:\Program Files\apache-ant-1.9.16\lib\ant-junit.jar;C:\Program Files\apache-ant-1.9.16\lib\ant-junit4.jar" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.Loan_Test skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\ACER\eclipse-workspace\AIS\junit\TEST-com.Loan_Test.xml crashfile=C:\Users\ACER\eclipse-workspace\AIS\junitvmwatcher14680772697196683422.properties propsfile=C:\Users\ACER\eclipse-workspace\AIS\junit8069949065919552879.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.Loan_Test skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\ACER\eclipse-workspace\AIS\junit\TEST-com.Loan_Test.xml crashfile=C:\Users\ACER\eclipse-workspace\AIS\junitvmwatcher2837592189989405653.properties propsfile=C:\Users\ACER\eclipse-workspace\AIS\junit14567633502156868214.properties" />
     <property name="ant.version" value="Apache Ant(TM) version 1.9.16 compiled on July 10 2021" />
     <property name="native.encoding" value="Cp1252" />
     <property name="jdk.debug" value="release" />
-    <property name="env.WT_SESSION" value="a4042ed9-781d-44f9-bee1-35a3f1426afa" />
+    <property name="env.WT_SESSION" value="e5a63140-6d11-4443-b2a4-8fa7339b4232" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
     <property name="ant.file.type" value="file" />
     <property name="env.windir" value="C:\WINDOWS" />
@@ -121,9 +121,9 @@
     <property name="ant.project.invoked-targets" value="pit" />
     <property name="env.PROCESSOR_LEVEL" value="6" />
   </properties>
-  <testcase classname="com.Loan_Test" name="calculateTotalInterest" time="0.008" />
-  <testcase classname="com.Loan_Test" name="calculateMonthlyRate" time="0.001" />
-  <testcase classname="com.Loan_Test" name="loanDetails" time="0.001" />
+  <testcase classname="com.Loan_Test" name="calculateTotalInterest" time="0.007" />
+  <testcase classname="com.Loan_Test" name="calculateMonthlyRate" time="0.0" />
+  <testcase classname="com.Loan_Test" name="loanDetails" time="0.0" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
