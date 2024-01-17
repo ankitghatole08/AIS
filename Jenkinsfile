@@ -16,7 +16,7 @@ pipeline {
         stage('test') {
             steps {
                 
-                bat 'ant Main_classTest'
+                bat 'ant Loan_Test'
             }
         }
         stage('mutation') {

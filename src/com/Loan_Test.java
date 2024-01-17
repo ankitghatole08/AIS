@@ -1,8 +1,10 @@
 package com;
 
-import org.junit.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.*;
+
+import org.junit.Test;
+
 
 
 public class Loan_Test {
