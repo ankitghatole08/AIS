@@ -134,7 +134,7 @@
 		
 	
 	
-	<target name="spotbugs" depends="build">
+	<target name="spotbugs" depends="build"> <!--Comment-->
 	  <spotbugs home="${spotbugs.home}"
 	            output="xml"
 	            outputFile="bcel-sb.xml" >	
